@@ -1,0 +1,20 @@
+<div class="container">
+  <ul class="progressbar" >
+    <ng-container *ngFor="let workflow of workflowItems">
+    <ng-container *ngIf="workflow.display">
+    <li class="progressli" [ngClass]="workflow.status === 'initiated'
+                   ? 'pass-init':
+                   workflow.status === 'Approved'
+                   ? 'pass':
+                   workflow.status === 'Validated'
+                   ? 'pass':
+                   workflow.status === 'Pending'
+                   ? 'fail':''
+                   ">
+                  <h3>{{workflow.role}}</h3>
+                  <p>{{workflow.status}}</p>
+                  </li>
+                  </ng-container>
+                </ng-container>
+  </ul>
+</div>
