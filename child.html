@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS :nth-child Selectors</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        *{ 
+            padding: 0; 
+            margin: 0; 
+            box-sizing: border-box; 
+        }
+        html{ 
+            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif; 
+            font-size: calc(1.5vh + 1vw + 1%); 
+            line-height: 1.5; 
+            -ms-text-size-adjust: 100%; 
+            -webkit-text-size-adjust: 100%; 
+        }
+        body{ 
+            overflow: auto; 
+            min-height: 100vh; 
+            width: 100vw; 
+        }
+        main{
+            padding: 1rem 2rem;
+        }
+        h1, h2{
+            padding: 1rem 0;
+        }
+        ul{
+            list-style-position: inside;
+            padding: 0.5rem 0;
+        }
+        p{
+            padding: 0.5rem 0;
+        }
+        /**********
+        :nth-child(an + b)
+        :first-child
+        :last-child
+        :nth-last-child(b)
+        :first-of-type
+        :last-of-type
+        :nth-of-type(an + b)
+        :nth-last-of-type(b)
+        **********/
+        ul li:first-child{
+            color: red;
+        }
+        ul li:last-child{
+            /* color: gold; */
+        }
+        li:nth-child(3n + 2){
+            color: greenyellow;
+        }
+        li:nth-child(even){
+            background-color: olive
+        }
+        .main p:nth-of-type(1){
+            /* .main p:first-of-type */
+            font-size: 1.5rem;
+        }
+        .main :nth-child(3){
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <h1>CSS :nth-child Selectors</h1>
+        <h2>The sub heading</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione libero nemo placeat, perspiciatis architecto. Reprehenderit, architecto sequi deleniti consectetur, amet qui. Maxime a, neque commodi vel alias aliquam ipsa asperiores.</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>
+            <a>item 5</a>
+            <a>second</a>
+            <a>third</a>
+            </li>
+        </ul>
+        <p>Quod iure suscipit voluptas, culpa, quis dicta! Nesciunt, quas commodi quos repellendus? Fuga odit reprehenderit adipisci iusto sunt. Voluptatum dignissimos soluta nam quod nesciunt, non magni optio quos fuga eum?</p>
+        <p>Exercitationem, vero nemo ex veniam voluptate nisi aliquam necessitatibus perferendis totam inventore aspernatur maxime autem voluptates aliquid quos blanditiis quas natus ipsum facilis, itaque incidunt sed omnis eaque libero. Aspernatur!</p>
+    </main>
+    <script>
+        
+    </script>
+</body>
+</html>
